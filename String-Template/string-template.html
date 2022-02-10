@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Template</title>
+</head>
+<body>
+    
+    <script>
+
+        //pada string tamplate imi menggunkan backtic bukan kutip
+        const name = "Muhamad Rizaludin";
+        const tempalte = `Name : ${name}`;
+
+        console.info(tempalte);
+
+        //expresiom di string template
+
+        const nilai = 90;
+        const template2 = `Name : ${name}, Lulus : ${nilai > 75}`;
+        
+        console.info(template2);
+
+        //Multiline string
+        let multilinestring = `
+        Nama saya Muhamad Rizaludin 
+        saya sedang belajar JavaScript
+        insyaalloh bisa
+        aamiin`;
+
+        document.writeln("<pre>");
+        document.writeln(multilinestring);
+        document.writeln("</pre>");
+    </script>
+
+</body>
+</html>

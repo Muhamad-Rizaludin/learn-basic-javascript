@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi String dan Number Pada JavaScript</title>
+</head>
+<body>
+    
+<script>
+    /*pada konversi string ini terdapat 3 yaitu parsInt(merubah string ke number bilangan bulat)    const value1 = parseInt("1")
+     parseFloat ()->Merubah string kedalam number berupa pecahan
+     Number ()->Merubah string kedalam number baik itu bilangan bulata atau pecahan sesuai dengan yang di inputkan
+     number.toString()-> untuk merubah dari number menjadi string
+    */
+    const value1 = parseInt("1");
+    const value2 = 1;
+    const sum = value1 + value2;
+
+    document.writeln(`<p>${sum}</p>`);
+
+    document.writeln(`<p>${parseInt("1.1")}</p>`);//1
+    document.writeln(`<p>${parseFloat("1.1")}</p>`);//1.1
+    document.writeln(`<p>${Number("1.1")}</p>`);//1.1
+
+    const a = 1;
+    const b = 2;
+    const total = a.toString() + b.toString();
+    document.writeln(`<p>${total}</p>`);
+
+    //kode NaN
+    //pada parsInt() atau parseFloat() dapata mentolelir kesalahan pada data
+    document.writeln(`<p>${parseInt("salah")}</p>`);//NaN
+    document.writeln(`<p>${parseFloat("1.1text")}</p>`);//1.1
+
+    //pada Number() tidak akan mentolelir kesalahan pada data
+    document.writeln(`<p>${Number("1.1ups")}</p>`);//NaN
+    document.writeln(`<p>${Number("1.1x")}</p>`);//NaN
+    document.writeln(`<p>${Number("bukan number")}</p>`);//NaN
+
+    //Kode Operasi pada NaN -> jika terdapat salah satu variable atau keduanya NaN Maka Hasilnya akan NaN
+    const nilai1 = Number("salah");//NaN
+    const nilai2 = 100;//Number
+
+    const jumlah = nilai1 + nilai2; //NaN
+    document.writeln(`<p>${jumlah}</p>`);
+
+    //function isNaN() -> untuk mengecek sebuah number NaN atau Bukan value berupa true / flase
+    document.writeln(`<p>${isNaN(nilai1)}</p>`);
+    document.writeln(`<p>${isNaN(nilai2)}</p>`);
+
+</script>
+
+</body>
+</html>

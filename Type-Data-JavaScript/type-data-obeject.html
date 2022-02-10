@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Data Object</title>
+</head>
+<body>
+
+<script>
+
+    // pada array di javascript tidak bisa membuat array assiative
+    // maka akan otomatis dikonveersi menjadi type data object
+
+    //membuat object
+    const person = {
+        nama : "Muhamad Rizaludin",
+        alamat : "Jatinangor",
+        umur : 22
+    };
+
+
+    //ubah property/atribute
+
+    //person["nama"] = "Muhamad Rizaludin";
+    //person["alamat"] = "Jatinangor";
+    //person["umur"] = 22;
+
+    console.table(person);
+    console.info(`Nama : ${person.nama}`);
+    console.info(`Alamat : ${person.alamat}`);
+    console.info(`Umur : ${person.umur}`);
+
+    delete person["umur"];
+    console.table(person);
+</script>
+
+</body>
+</html>
